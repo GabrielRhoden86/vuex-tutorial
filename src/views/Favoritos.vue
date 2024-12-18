@@ -52,6 +52,13 @@ export default {
           last_name: "Fields",
           avatar: "https://reqres.in/img/faces/10-image.jpg",
         },
+        {
+          id: 11,
+          email: "rachel.howell@reqres.in",
+          first_name: "Rachel",
+          last_name: "Howell",
+          avatar: "https://reqres.in/img/faces/12-image.jpg"
+        }
       ];
     });
 
