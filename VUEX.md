@@ -15,3 +15,13 @@ no objeto 'createStore' coloque o dados em 'state'
 import { useStore } from "vuex";
 const store = useStore();
 const listaPessoas = computed(()=>store.state.listaPessoas);
+
+## 6 - mutations modificar o estado da store de forma síncrona:~
+Para alterar o state(dados) no vuex é necessário aplicar os mutations
+O erro  as propriedades 'readonly' computadas (computed) em Vue.js são somente leitura. 
+Isso significa que você não pode modificar diretamente o valor de listaFavoritos dentro da função removeFavorito.
+Para resolver esse problema, você deve disparar uma ação ou uma mutação no Vuex para atualizar o estado.
+ em src\store\index.js implmente mutations 'REMOVE_FAVORITO'.  Chame a mutations em src\views\Favoritos.vue 'removeFavorito'
+
+## 7 - aplicar mudança de estado para que o item do componente(favorito) tenha o mesmo estados em todas as páginas
+ 

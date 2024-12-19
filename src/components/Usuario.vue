@@ -26,7 +26,6 @@ export default {
         emit("selecionado", idUsuario);
         return;
       }
-
       emit("removeSelecionado", idUsuario);
     }
 
@@ -34,8 +33,6 @@ export default {
   },
 };
 </script>
-
-
 
 
 <style>

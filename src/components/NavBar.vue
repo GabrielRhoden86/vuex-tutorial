@@ -6,14 +6,23 @@
     </ul>
     <div class="favorito">
       <img src="@/assets/heart.svg" alt="favoritos" />
-      <span v-if="true">1</span>
+      <span v-if="totalFavoritos > 0">{{ totalFavoritos }}</span>
     </div>
   </nav>
 </template>
 
 <script>
+import {computed} from 'vue'
+import {useStore} from 'vuex'
+
 export default {
-  setup() {},
+  setup() {
+    const store = useStore();
+    const totalFavoritos = computed(() =>  store.getters.totalFavoritos);
+    return {
+      totalFavoritos
+    }
+  },
 };
 </script>
 
@@ -59,8 +68,7 @@ export default {
   font-size: 12px;
   text-align: center;
   font-weight: bold;
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  top: 10px;
-  right: 4px;
+  top: 8px;
+  right: 8px;
 }
 </style>

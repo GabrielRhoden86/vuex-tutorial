@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import Usuario from "@/components/Usuario.vue";
-import { computed, ref } from "vue";
-import { useStore } from "vuex";
-export default {
+  import Usuario from "@/components/Usuario.vue";
+  import { computed, ref } from "vue";
+  import { useStore } from "vuex";
+  export default {
   components: {
     Usuario,
   },
@@ -25,10 +25,10 @@ export default {
     const nomeSelecionados = computed(() => {
     return selecionados.value.map((x) => `${x.first_name} ${x.last_name}`);
     });
-    
+
     function setUsuarioSelecionado(idUsuario) {
       const usuarioSelecionado = listaPessoas.value.find((x) => x.id == idUsuario);
-      selecionados.value = [...selecionados.value, usuarioSelecionado];
+      selecionados.value = [selecionados.value, usuarioSelecionado];
     }
     function removeUsuarioSelecionado(idUsuario) {
       selecionados.value = selecionados.value.filter((x) => x.id !== idUsuario);
@@ -42,6 +42,8 @@ export default {
   },
 };
 </script>
+
+
 
 <style>
 h1 {
